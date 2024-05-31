@@ -10,8 +10,38 @@
 </head>
 
 <body>
-    
+    <div>
+        <button class="show-dialog">Add New Book</button>
+    </div>
+    <dialog class="dialog">
+        <form method="dialog" class="book-form">
+            <p>Add New Book Details</p>
+            <div>
+                <p>
+                    <label for="title">Book Title</label>
+                    <input type="text" name="book-title" id="title">
+                </p>
+                <p>
+                    <label for="author">Book Author(s)</label>
+                    <input type="text" name="book-author" id="author">
+                </p>
+                <p>
+                    <label for="pages">Number of Pages</label>
+                    <input type="text" name="book-pages" id="pages">
+                </p>
+                <p>
+                    <label for="read">Have you read this book?</label>
+                    <input type="checkbox" name="book-read" id="read">
+                </p>
+            </div>
+            <div>
+                <input type="submit" class="close-dialog" value="Cancel">
+                <input type="submit" class="add-book">
+            </div>
+        </form>
+    </dialog>
 </body>
 
 <script src="./script.js"></script>
+
 </html>
