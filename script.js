@@ -8,6 +8,7 @@ const newBookTitle = document.querySelector('#title');
 const newBookAuthor = document.querySelector('#author');
 const newBookPages = document.querySelector('#pages');
 const newBookRead = document.querySelector('#read');
+const container = document.querySelector('.library');
 
 // Object constructor
 function Book(title, author, pages, read) {
@@ -24,10 +25,21 @@ function Book(title, author, pages, read) {
 function addBookToLibrary(title, author, pages, read) {
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
+    displayBooks();
 }
 
 // Function loops through the array and displays each book on the page
-
+function displayBooks() {
+    container.replaceChildren();
+    for (let i = 0; i < myLibrary.length; i++) {
+        const displayBook = document.createElement('div');
+        displayBook.classList.add('books');
+        container.appendChild(displayBook);
+        const bookInfo = document.createElement('p');
+        bookInfo.innerHTML = myLibrary[i].info();
+        displayBook.appendChild(bookInfo);
+    }
+}
 
 // Dialog for adding new book details
 showDialogBtn.addEventListener('click', () => {
