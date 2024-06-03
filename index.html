@@ -13,7 +13,7 @@
     <main class="library">
 
     </main>
-    <div class="books show-dialog">
+    <div class="books add-dialog">
         <p>Add New Book</p>
         <img src="./images/plus-circle.svg" alt="plus sign">
     </div>
@@ -23,15 +23,15 @@
             <div>
                 <p>
                     <label for="title">Book Title</label>
-                    <input type="text" name="book-title" id="title">
+                    <input type="text" name="book-title" id="title" required />
                 </p>
                 <p>
                     <label for="author">Book Author(s)</label>
-                    <input type="text" name="book-author" id="author">
+                    <input type="text" name="book-author" id="author" required />
                 </p>
                 <p>
                     <label for="pages">Number of Pages</label>
-                    <input type="text" name="book-pages" id="pages">
+                    <input type="number" name="book-pages" id="pages" min="1" required />
                 </p>
                 <p>
                     <label for="read">Have you read this book?</label>

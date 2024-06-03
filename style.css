@@ -26,11 +26,26 @@ body {
     border-radius: 5px;
     box-shadow: 2px 2px 2px lightgray;
 }
-.show-dialog {
+.read {
+    /* height: 20px; */
+    /* background: green; */
+    /* border-radius: 50%; */
+    /* filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(132deg) brightness(110%) contrast(101%); */
+}
+.read:hover {
+    background: darkgray;
+}
+.add-dialog {
     width: 106px;
     border-left: none;
     cursor: cell;
 }
-.show-dialog:hover {
+.add-dialog:hover {
     background: darkgray;
+}
+input:required {
+    /* border-color: default; */
+}
+input:required:invalid {
+    /* border-color: red; */
 }
